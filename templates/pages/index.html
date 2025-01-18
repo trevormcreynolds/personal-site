@@ -1,0 +1,94 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="mx-auto px-8 py-16 max-w-3xl">
+    <p class="font-medium text-2xl text-balance text-neutral-900 sm:text-4xl dark:text-white tracking-tight">Lorem ipsum dolor sit amet consectetur.</p>
+    <p class="mt-4 text-neutral-500 lg:text-pretty dark:text-neutral-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit perferendis impedit quidem veritatis. Dolore et rerum soluta nisi.</p>
+    <div class="flex flex-wrap gap-2 mt-6">
+      <!-- <a class="inline-flex justify-center items-center gap-2 border-white/20 bg-black hover:bg-neutral-500 dark:hover:bg-neutral-800 dark:bg-white px-6 py-3 border rounded-lg w-full lg:w-auto font-medium text-sm text-white dark:hover:text-neutral-50 dark:text-black transition group outline-offset-2" href="forms/contact" title="your title" aria-label="your label"> Contact me </a> -->
+      <!-- <a class="inline-flex justify-center items-center gap-2 border-neutral-200 dark:border-white/20 bg-white hover:bg-neutral-50 dark:hover:bg-neutral-800 dark:bg-neutral-800/50 px-6 py-3 border rounded-lg w-full lg:w-auto font-medium text-black text-sm dark:hover:text-neutral-50 dark:text-white transition group outline-offset-2" href="/studio/home" title="your title" aria-label="your label"> Hire me </a> -->
+      <a class="inline-flex justify-center items-center gap-2 border-neutral-200 dark:border-white/20 bg-white hover:bg-neutral-50 dark:hover:bg-neutral-800 dark:bg-neutral-800/50 px-6 py-3 border rounded-lg w-full lg:w-auto font-medium text-black text-sm dark:hover:text-neutral-50 dark:text-white transition group outline-offset-2" href="/studio/home" title="your title" aria-label="your label"> Download CV <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-file-download icons-tabler-outline size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M14 3v4a1 1 0 0 0 1 1h4"></path><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"></path><path d="M12 17v-6"></path><path d="M9.5 14.5l2.5 2.5l2.5 -2.5"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mx-auto px-8 py-12 max-w-3xl">
+    <h2 class="font-medium text-2xl text-neutral-900 sm:text-4xl dark:text-white tracking-tight">Selected Work 2021 — Present</h2>
+    <p class="mt-4 text-neutral-500 text-sm dark:text-neutral-400">A selection of projects I've built over the years.</p>
+    <div class="gap-12 gap-x-6 gap-y-24 border-neutral-200 dark:border-neutral-700 grid md:grid-cols-2 mt-4 pt-12 border-t">
+      <div class="relative group">
+        <div class="rounded-lg overflow-hidden aspect-[384/246]">
+          <img src="{% static 'img/Screenshot_Mockup_1370x846.png' %}" alt="Project Mockup" class="group-hover:scale-125 w-full h-full duration-500 ease-in-out object-center object-cover" />
+        </div>
+        <div class="group-hover:text-blue-500 flex justify-between items-center space-x-8 mt-4 font-semibold text-lg text-neutral-900 dark:text-white leading-6">
+          <h3>
+            <a href="/store/2">
+              <span aria-hidden="true" class="absolute inset-0"></span>
+              Project Mockup
+            </a>
+          </h3>
+          <p>2025</p>
+        </div>
+        <p class="mt-4 line-clamp-2 text-neutral-500 text-pretty dark:text-neutral-400">A dark-mode educational platform theme, emphasizing a sleek and modern interface for online learning. It offers features like course page, teachers, and lessons, all in a coherent, dark aesthetic designed to enhance user focus and interaction.</p>
+      </div>
+      <div class="relative group">
+        <div class="rounded-lg overflow-hidden aspect-[384/246]">
+          <img src="{% static 'img/Screenshot_Mockup_1370x846.png' %}" alt="Project Mockup" class="group-hover:scale-125 w-full h-full duration-500 ease-in-out object-center object-cover" />
+        </div>
+        <div class="group-hover:text-blue-500 flex justify-between items-center space-x-8 mt-4 font-semibold text-lg text-neutral-900 dark:text-white leading-6">
+          <h3>
+            <a href="/store/4">
+              <span aria-hidden="true" class="absolute inset-0"></span>
+              Project Mockup
+            </a>
+          </h3>
+          <p>2025</p>
+        </div>
+        <p class="mt-4 line-clamp-2 text-neutral-500 text-pretty dark:text-neutral-400">A dynamic and modern SaaS theme that offers a dark theme with vibrant purple and blue accents, emphasizing user engagement and a seamless online experience. This template is ideal for SaaS startups or banking apps looking to provide their users with a sophisticated, secure, and user-friendly website.</p>
+      </div>
+    </div>
+    <div class="flex flex-wrap justify-end border-neutral-200 dark:border-neutral-700 mt-6 pt-6 border-t">
+      <a class="text-neutral-500 text-sm hover:text-blue-400 dark:text-neutral-50 duration-200 group" href="/store/home"> See all products → </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="mx-auto px-8 py-12 max-w-3xl">
+    <h2 class="font-medium text-2xl text-neutral-900 sm:text-4xl dark:text-white tracking-tight">Latest Articles</h2>
+    <p class="mt-4 text-neutral-500 text-sm dark:text-neutral-400">Check out my newest blog posts and discover the latest insights and trends.</p>
+    <div class="border-neutral-200 dark:border-neutral-700 mt-4 py-12 pt-12 border-t max-w-3xl">
+      <div class="flex flex-col dark:border-white/10 pt-2 border-t border-black/10">
+        <a href="/blog/posts/10" title="Achieving peak website performance: a 2024 guide" class="group">
+          <div class="flex flex-col dark:border-white/10 pt-2 pb-8 border-b border-black/10">
+            <span class="font-medium text-xs text-zinc-500 dark:text-zinc-400 uppercase">
+              <time datetime="Mon Sep 05">Mon Sep 05</time>
+            </span>
+            <h4 class="group-hover:text-black/70 dark:group-hover:text-white/70 mt-1 font-medium text-base text-black dark:text-white">Achieving peak website performance: a 2024 guide</h4>
+            <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400">Uncover key strategies for maximizing site performance, from load speed improvements to enhancing overall user experience.</p>
+          </div>
+        </a>
+        <a href="/blog/posts/10" title="Achieving peak website performance: a 2024 guide" class="group">
+          <div class="flex flex-col dark:border-white/10 pt-2 pb-8 border-b border-black/10">
+            <span class="font-medium text-xs text-zinc-500 dark:text-zinc-400 uppercase">
+              <time datetime="Mon Sep 05">Mon Sep 05</time>
+            </span>
+            <h4 class="group-hover:text-black/70 dark:group-hover:text-white/70 mt-1 font-medium text-base text-black dark:text-white">Achieving peak website performance: a 2024 guide</h4>
+            <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400">Uncover key strategies for maximizing site performance, from load speed improvements to enhancing overall user experience.</p>
+          </div>
+        </a>
+      </div>
+      <div class="flex flex-wrap justify-end border-neutral-200 dark:border-neutral-700 mt-6 pt-6 border-t">
+        <a class="text-neutral-500 text-sm hover:text-blue-400 dark:text-neutral-50 duration-200 group" href="/blog/blog"> Read all posts → </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

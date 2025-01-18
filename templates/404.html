@@ -1,0 +1,31 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% block title %}500 Server Error{% endblock %}
+
+{% block content %}
+
+<section>
+  <div class="mx-auto px-8 lg:py-32 xl:py-54 pt-12 w-full max-w-2xl 2xl:max-w-3xl">
+    <h1 class="font-medium text-base text-black dark:text-white">404 Page not found</h1>
+  </div>
+  <div class="mx-auto px-8 py-12 w-full max-w-2xl 2xl:max-w-3xl">
+    <div class="dark:border-white/10 pt-2 border-t border-black/10">
+      <p class="text-sm text-zinc-500 2xl:text-base dark:text-zinc-400">It seems you've wandered off the beaten path.</p>
+      <ul class="flex flex-col gap-y-2 mt-4 font-medium text-black dark:text-white list-disc list-inside" role="list">
+        <li>
+          <a class="text-sm hover:text-zinc-500 dark:hover:text-zinc-400" href="#_"> Go back to the homepage </a>
+        </li>
+        <li>
+          <a class="text-sm hover:text-zinc-500 dark:hover:text-zinc-400" href="#_"> Search for what you're looking for </a>
+        </li>
+        <li>
+          <a class="text-sm hover:text-zinc-500 dark:hover:text-zinc-400" href="#_"> Contact me </a>
+          if you think this is an error.
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" class="{% if request.COOKIES.theme == 'dark' %}dark{% endif %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/output.css' %}">
+  </head>
+
+  <script>
+    (function() {
+      const storedTheme = localStorage.getItem('theme')
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    })();
+  </script>
+
+  <body class="bg-stone-50 dark:bg-stone-900 text-black dark:text-white">
+    <!-- Site header -->
+    {% include "partials/header.html" %}
+
+    {% block content %}{% endblock content %}
+
+    {% include "partials/footer.html" %}
+
+    <script>
+      // Get the checkbox and listen for change events
+      const lightSwitch = document.getElementById('light-switch');
+      const html = document.documentElement;
+    
+      // Set initial theme based on localStorage
+      const storedTheme = localStorage.getItem('theme') || 'light';
+      const isDarkMode = storedTheme === 'dark';
+    
+      // Apply the stored theme on page load
+      if (isDarkMode) {
+        html.classList.add('dark');
+        lightSwitch.checked = true;
+      } else {
+        html.classList.remove('dark');
+        lightSwitch.checked = false;
+      }
+    
+      // Update theme and localStorage when the checkbox is toggled
+      lightSwitch.addEventListener('change', () => {
+        const isChecked = lightSwitch.checked;
+        const newTheme = isChecked ? 'dark' : 'light';
+    
+        html.classList.toggle('dark', isChecked);
+        localStorage.setItem('theme', newTheme);
+      });
+    </script>
+  </body>
+</html>
