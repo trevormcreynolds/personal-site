@@ -31,7 +31,7 @@ class Post(TimeStampedModel):
     status = models.CharField(max_length=2,
                               choices=Status.choices,
                               default=Status.DRAFT)
-    tags = TaggableManager()
+    tags = TaggableManager(blank=True)
     objects = models.Manager()
     published = PublishedManager()
 
