@@ -1,0 +1,102 @@
+[
+  {
+    "model": "core.timestampedmodel",
+    "pk": 1,
+    "fields": {
+      "created": "2025-01-19T02:00:58Z",
+      "updated": "2025-01-19T02:00:58Z"
+    }
+  },
+  {
+    "model": "core.timestampedmodel",
+    "pk": 2,
+    "fields": {
+      "created": "2025-01-20T02:00:58Z",
+      "updated": "2025-01-20T02:00:58Z"
+    }
+  },
+  {
+    "model": "core.timestampedmodel",
+    "pk": 3,
+    "fields": {
+      "created": "2025-01-20T02:00:58Z",
+      "updated": "2025-01-20T02:00:58Z"
+    }
+  },
+  {
+    "model": "core.timestampedmodel",
+    "pk": 4,
+    "fields": {
+      "created": "2025-01-20T02:00:58Z",
+      "updated": "2025-01-20T02:00:58Z"
+    }
+  },
+  {
+    "model": "core.timestampedmodel",
+    "pk": 5,
+    "fields": {
+      "created": "2025-01-20T02:00:58Z",
+      "updated": "2025-01-20T02:00:58Z"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 1,
+    "fields": {
+      "title": "Understanding Django Models",
+      "subhead": "A beginner's guide to database management in Django",
+      "slug": "understanding-django-models",
+      "body": "Django models are the foundation of database management in Django. This post covers how to define models, set up relationships, and use migrations to manage your database schema effectively.",
+      "publish": "2025-01-19T02:00:58Z",
+      "status": "PB"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 2,
+    "fields": {
+      "title": "Introduction to REST APIs with Django Rest Framework",
+      "subhead": "Building your first REST API with Django Rest Framework",
+      "slug": "introduction-to-rest-apis",
+      "body": "Learn how to build a simple REST API using Django Rest Framework, including setting up serializers, views, and routing your endpoints.",
+      "publish": "2025-01-20T02:00:58Z",
+      "status": "PB"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 3,
+    "fields": {
+      "title": "Mastering Git for Collaborative Development",
+      "subhead": "Tips and tricks for effective version control with Git",
+      "slug": "mastering-git",
+      "body": "Version control is a vital skill for developers. This post explores advanced Git commands, branching strategies, and how to resolve merge conflicts.",
+      "publish": "2025-01-21T02:00:58Z",
+      "status": "PB"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 4,
+    "fields": {
+      "title": "Optimizing Web Performance with Lighthouse",
+      "subhead": "Use Lighthouse to improve your site's speed and user experience",
+      "slug": "optimizing-web-performance",
+      "body": "Google's Lighthouse tool provides actionable insights into improving web performance. Learn how to audit your site and address common performance issues.",
+      "publish": "2025-01-22T02:00:58Z",
+      "status": "PB"
+    }
+  },
+  {
+    "model": "blog.post",
+    "pk": 5,
+    "fields": {
+      "title": "Introduction to Web Accessibility",
+      "subhead": "Why web accessibility matters and how to get started",
+      "slug": "introduction-to-web-accessibility",
+      "body": "Web accessibility ensures your site is usable by everyone, including people with disabilities. This post provides an overview of accessibility guidelines and practical tips to implement them.",
+      "publish": "2025-01-23T02:00:58Z",
+      "status": "PB"
+    }
+  }
+]
