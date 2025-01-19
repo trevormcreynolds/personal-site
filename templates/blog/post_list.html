@@ -8,14 +8,21 @@
   <div class="mx-auto px-8 py-12 max-w-3xl">
     <h1 class="font-medium text-2xl text-neutral-900 sm:text-4xl dark:text-white tracking-tight">Latest Articles</h1>
     <p class="mt-4 text-neutral-500 text-sm dark:text-neutral-400">Check out my newest blog posts and discover the latest insights and trends.</p>
-    <div class="border-neutral-200 dark:border-neutral-700 mt-4 py-12 pt-12 border-t max-w-3xl">
-      <div class="flex flex-col dark:border-white/10 pt-2 border-t border-black/10">
+    <div class="border-neutral-200 dark:border-neutral-700 mt-4 border-t max-w-3xl">
+      <div class="flex flex-col">
         {% for post in posts %}
         <a href="{{ post.get_absolute_url }}" title="Achieving peak website performance: a 2024 guide" class="group">
           <div class="flex flex-col dark:border-white/10 pt-2 pb-8 border-b border-black/10">
-            <span class="font-medium text-xs text-zinc-500 dark:text-zinc-400 uppercase">
-              <time datetime="Mon Sep 05">{{ post.publish }}</time>
-            </span>
+            <div class="flex flex-row justify-between py-2">
+              <span class="font-medium text-xs text-zinc-500 dark:text-zinc-400 uppercase">
+                <time datetime="{{ post.publish }}">{{ post.publish }}</time>
+              </span>
+              {% if post.tags.all %}
+              <span class="font-medium text-xs text-zinc-500 dark:text-zinc-400 uppercase">
+                {{ post.tags.all|join:", " }}
+              </span>
+              {% endif %}
+            </div>
             <h2 class="group-hover:text-black/70 dark:group-hover:text-white/70 mt-1 font-medium text-base text-black dark:text-white">{{ post.title }}</h2>
             <p class="mt-4 text-sm text-zinc-500 dark:text-zinc-400">{{ post.body|truncatewords:30|linebreaks }}</p>
           </div>

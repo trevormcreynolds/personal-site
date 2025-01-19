@@ -28,6 +28,49 @@
 
     {% include "partials/footer.html" %}
 
+    <div class="right-6 bottom-6 fixed">
+      <button
+        id="returnToTop"
+        class="inline-flex focus:z-10 items-center border-stone-200 dark:border-stone-600 bg-white hover:bg-stone-100 dark:hover:bg-stone-700 dark:bg-stone-800 opacity-0 px-4 py-2 border rounded-lg focus:ring-4 focus:ring-zinc-100 dark:focus:ring-zinc-700 font-medium text-sm text-zinc-900 hover:text-zinc-700 dark:hover:text-white focus:text-zinc-700 dark:text-zinc-400 transition-opacity duration-300 pointer-events-none focus:outline-none"
+        aria-label="Return to top"
+      >
+        Back to Top
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-3 h-3 ms-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+      </button>
+    </div>
+
+    <script>
+      // Select the button
+      const returnToTopButton = document.getElementById("returnToTop");
+  
+      // Show button with smooth transition when scrolling down
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          returnToTopButton.classList.remove("opacity-0", "pointer-events-none");
+          returnToTopButton.classList.add("opacity-100", "pointer-events-auto");
+        } else {
+          returnToTopButton.classList.add("opacity-0", "pointer-events-none");
+          returnToTopButton.classList.remove("opacity-100", "pointer-events-auto");
+        }
+      });
+  
+      // Smooth scroll to top when the button is clicked
+      returnToTopButton.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+
     <script>
       // Get the checkbox and listen for change events
       const lightSwitch = document.getElementById('light-switch');

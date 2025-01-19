@@ -7,20 +7,25 @@
         <div class="flex justify-center">
           <ul class="flex items-center sm:gap-x-2 font-medium text-sm">
             <li>
-              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200" href="#">Home</a>
+              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200 transition-colors" href="{% url 'core:index' %}">Home</a>
             </li>
             <li>
-              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200" href="#">Projects</a>
+              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200 transition-colors" href="{% url 'core:projects' %}">Projects</a>
             </li>
             <li>
-              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200 transition-colors" href="#">Blog</a>
+              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200 transition-colors" href="{% url 'blog:post_list' %}">Blog</a>
             </li>
             <li>
-              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200 transition-colors" href="#">About</a>
+              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200 transition-colors" href="{% url 'core:about' %}">Now</a>
             </li>
             <li>
-              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200 transition-colors" href="#">Contact</a>
+              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200 transition-colors" href="{% url 'core:contact' %}">Contact</a>
             </li>
+            {% if user.is_admin %}
+            <li>
+              <a class="hover:bg-stone-200 dark:hover:bg-stone-800 px-3 py-1.5 rounded-lg text-gray-800 dark:text-gray-200 transition-colors" href="admin/">Admin</a>
+            </li>
+            {% endif %}
           </ul>
         </div>
         <div class="flex">
