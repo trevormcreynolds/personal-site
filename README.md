@@ -17,12 +17,6 @@ $ python manage.py delete_migrations
 $ python manage.py delete_migrations
 ```
 
-### Generate Secret Key
-
-```sh
-python manage.py generate_secret_key
-```
-
 ### Livereload (using [django-livereload-server](https://github.com/tjwalch/django-livereload-server))
 
 Start the livereload server:
@@ -44,5 +38,5 @@ In the browser's address bar access your web app by doing:
 ### Tailwind Build Process
 
 ```sh
-npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
+$ npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
 ```
