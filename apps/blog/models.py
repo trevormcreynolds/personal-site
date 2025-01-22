@@ -2,9 +2,25 @@ from django.db import models
 from django.utils import timezone
 from django.urls import reverse
 
+from taggit.models import TagBase, GenericTaggedItemBase
 from taggit.managers import TaggableManager
 
 from core.models import TimeStampedModel
+
+
+class BlogTag(TagBase):
+    description = models.TextField(blank=True, null=True, help_text="Provide a description for this tag")
+
+    class Meta:
+        verbose_name = "Tag"
+        verbose_name_plural = "Tags"
+    
+    def __str__(self):
+        return f"{self.name} - {self.description[:50]}"
+
+
+class TaggedBlogPost(GenericTaggedItemBase):
+    tag = models.ForeignKey(BlogTag, on_delete=models.CASCADE, related_name="tagged_items")
 
 
 class PublishedManager(models.Manager):
@@ -31,7 +47,7 @@ class Post(TimeStampedModel):
     status = models.CharField(max_length=2,
                               choices=Status.choices,
                               default=Status.DRAFT)
-    tags = TaggableManager(blank=True)
+    tags = TaggableManager(through=TaggedBlogPost, verbose_name="Tags", blank=True)
     objects = models.Manager()
     published = PublishedManager()
 

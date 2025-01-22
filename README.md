@@ -40,3 +40,11 @@ In the browser's address bar access your web app by doing:
 ```sh
 $ npx tailwindcss -i ./static/css/input.css -o ./static/css/output.css --watch
 ```
+
+### Build Pygments
+
+<!-- https://python-markdown.github.io/extensions/code_hilite/ -->
+
+```sh
+$ pygmentize -S default -f html -a .codehilite > styles.css
+```

@@ -1,0 +1,122 @@
+[
+  {
+    "model": "taggit.tag",
+    "pk": 1,
+    "fields": { "name": "Django", "slug": "django" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 2,
+    "fields": { "name": "Tech", "slug": "tech" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 3,
+    "fields": { "name": "Tutorials", "slug": "tutorials" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 4,
+    "fields": { "name": "Python", "slug": "python" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 5,
+    "fields": { "name": "Javascript", "slug": "javascript" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 6,
+    "fields": { "name": "Economics", "slug": "economics" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 7,
+    "fields": { "name": "Books", "slug": "books" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 8,
+    "fields": { "name": "Fitness", "slug": "fitness" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 9,
+    "fields": { "name": "Misc", "slug": "misc" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 10,
+    "fields": { "name": "Finance", "slug": "finance" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 11,
+    "fields": { "name": "Gamedev", "slug": "gamedev" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 12,
+    "fields": { "name": "History", "slug": "history" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 13,
+    "fields": { "name": "Writing", "slug": "writing" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 14,
+    "fields": { "name": "Git", "slug": "git" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 15,
+    "fields": { "name": "Performance", "slug": "performance" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 16,
+    "fields": { "name": "SEO", "slug": "seo" }
+  },
+  {
+    "model": "taggit.tag",
+    "pk": 17,
+    "fields": { "name": "Accessibility", "slug": "accessibility" }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 1,
+    "fields": { "tag": 1, "content_type": 13, "object_id": 1 }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 2,
+    "fields": { "tag": 1, "content_type": 13, "object_id": 2 }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 3,
+    "fields": { "tag": 16, "content_type": 13, "object_id": 4 }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 4,
+    "fields": { "tag": 17, "content_type": 13, "object_id": 5 }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 5,
+    "fields": { "tag": 16, "content_type": 13, "object_id": 5 }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 6,
+    "fields": { "tag": 14, "content_type": 13, "object_id": 3 }
+  },
+  {
+    "model": "taggit.taggeditem",
+    "pk": 7,
+    "fields": { "tag": 9, "content_type": 13, "object_id": 6 }
+  }
+]
